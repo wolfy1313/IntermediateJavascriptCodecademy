@@ -137,10 +137,10 @@ class Movie extends Media {
   }
 }
 class CD extends Media {
-  constructor(artist, title, songs, isCheckedOut, ratings) {
-    super(title, isCheckedOut, ratings);
+  constructor(artist, title, songs) {
+    super(title);
     this._artist = artist;
-    this.songs = songs;
+    this._songs = songs;
   }
   get artist(){
     return this._artist
