@@ -17,7 +17,7 @@ const getAverageSalaryByCompany = company => {
 }
 
 // Replace the empty array with the appropriate imported function/value
-const getSalaryAtCompany = (role, company) => {
+const getSalaryAtCompany = (company, role) => {
   const companyData = getDataByCompany(company);
   const roleAtCompany = companyData.find(obj => obj.role === role);
   return roleAtCompany.salary;
@@ -37,3 +37,8 @@ function calculateAverage(arrayOfNumbers) {
   arrayOfNumbers.forEach(number => total += number);
   return (total / arrayOfNumbers.length).toFixed(2);
 }
+
+export { getAverageSalaryByRole,
+getAverageSalaryByCompany,
+getSalaryAtCompany,
+getIndustryAverageSalary };
